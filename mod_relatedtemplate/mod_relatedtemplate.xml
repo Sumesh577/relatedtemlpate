@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+   <name>MOD_RELATEDTEMPLATE</name>
+   <author>JoomDev Team</author>
+   <creationDate>Oct 2018</creationDate>
+   <copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+   <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+   <authorEmail>info@joomdev.com</authorEmail>
+   <authorUrl>www.joomdev.com</authorUrl>
+   <version>1.0.0</version>
+   <description>mod_relatedtemplate</description>
+   <files>
+      <filename module="mod_relatedtemplate">mod_relatedtemplate.php</filename>
+      <folder>fields</folder>
+      <folder>tmpl</folder>
+      <folder>forms</folder>
+      <filename>helper.php</filename>
+   </files>
+   <languages folder="language">
+      <language tag="en-GB">en-GB/en-GB.mod_relatedtemplate.ini</language>
+      <language tag="en-GB">en-GB/en-GB.mod_relatedtemplate.sys.ini</language>
+   </languages>
+   <config>
+      <fields name="params">
+         <fieldset name="basic" addfieldpath="/modules/mod_relatedtemplate/fields">
+            <fieldset name="basic" addfieldpath="/modules/mod_relatedtemplate/fields">
+               <field name="templateCategory" type="list" default="" required="true" label="Select an option" description="">
+                  <option value="45">Joomla</option>
+                  <option value="46">Wordpress</option>
+               </field>
+               <field name="limit" type="number" max="10" min="1" label="Set Limit" description="" required="true" default="3" />
+            </fieldset>
+         </fieldset>
+         <fieldset name="advanced">
+            <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" default="default" />
+            <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" rows="3"/>
+         </fieldset>
+      </fields>
+   </config>>
+</extension>
